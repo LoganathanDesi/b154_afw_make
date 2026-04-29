@@ -2,6 +2,6 @@ pytest
 pytest-xdist
 pytest-order
 pyjavaproperties
-openxl
+openpyxl
 playwright
 allure-pytest
