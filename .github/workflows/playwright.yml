@@ -1,3 +1,9 @@
+name: Run Playwright Pytest
+
+on:
+  push:
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -11,11 +17,10 @@ jobs:
         with:
           python-version: '3.11'
 
-
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          pip install allure-pytest pytest-xdist
+          pip install pytest-xdist allure-pytest
 
       - name: Install Playwright browsers
         run: playwright install chromium --with-deps
